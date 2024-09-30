@@ -11,4 +11,4 @@ fireworks: bin/main.o bin/rand.o bin/fireworks.o
 clean:
 	rm bin/*
 run: fireworks
-	@bash -c "function cleanup() { tput cnorm; }; trap cleanup EXIT; tput civis; clear; ./fireworks"
+	@bash -c "function cleanup() { tput cnorm; clear; }; trap cleanup EXIT; tput civis; clear; ./fireworks"
