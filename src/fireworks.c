@@ -194,7 +194,7 @@ static void explodeable_handler(bool stress_test)
 		if (++t == 3)
 			t = 0;
 		plot_pixel(OBOS_TEXT_BACKGROUND, data.x, data.y);
-		float temp_pt = curr_delay / 1000.f;
+        float temp_pt = curr_delay / 1000.f;
 		data.act_x += data.vel_x * temp_pt;
 		data.act_y += data.vel_y * temp_pt;
 		data.x = data.act_x;
@@ -228,6 +228,9 @@ uintptr_t random_seed();
 void TestDriver_Fireworks(uint32_t max_iterations, int spawn_min, int spawn_max, bool stress_test)
 {
 	mt_seed(random_seed());
+    for (uint32_t y = 0; y < fb.height; y++)
+        for (uint32_t x = 0; x < fb.width; x++)
+            plot_pixel(OBOS_TEXT_BACKGROUND, x,y);
     for (uint32_t i = 0; i < max_iterations; i++)
 	{
 		int nToSpawn = fw_random() % spawn_max + spawn_min;

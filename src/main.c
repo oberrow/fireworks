@@ -57,5 +57,5 @@ int main()
         return errno;
     }
 //    printf ("Framebuffer is %dx%dx%d\n", fb.width, fb.height, fb.bpp);
-    TestDriver_Fireworks(UINT32_MAX, 1, 2, true);
+    TestDriver_Fireworks(UINT32_MAX, 2, 5, true);
 }
