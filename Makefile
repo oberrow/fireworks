@@ -1,4 +1,5 @@
 LD := $(CC)
+NASM := nasm
 all: fireworks
 bin/fireworks.o: src/fireworks.c
 	$(CC) -c $(CC_FLAGS) src/fireworks.c -o bin/fireworks.o
